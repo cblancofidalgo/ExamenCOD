@@ -8,21 +8,24 @@ public class Main {
 
             System.out.println("Listo");
         } else {
-        System.out.println("Fallo");
+            System.out.println("Fallo");
         }
-        if(metodo2()) {
+        if (metodo2()) {
             System.out.println("Listo");
         } else {
             System.out.println("Fallo");
         }
     }
 
-    public static boolean metodo1(String u){
+    public static boolean metodo1(String u) {
         Auxiliar obx1 = new Auxiliar(u);
         System.out.println("Conectando a " + obx1.h + ", con el usuario " + u);
-        return obx1.con();}
+        return obx1.con();
+    }
 
     public static boolean metodo2() {
         Auxiliar obx2 = new Auxiliar();
         System.out.println("Conectando a " + obx2.h + ", con el usuario " + obx2.e);
-        return obx2.con();}}
+        return obx2.con();
+    }
+}
