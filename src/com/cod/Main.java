@@ -3,29 +3,29 @@ package com.cod;
 public class Main {
     public static void main(String[] args) {
 
-        if (metodo1("pepe@danielcastelao.org")) {
+        if (conexionA("pepe@danielcastelao.org")) {
 
 
             System.out.println("Listo");
         } else {
             System.out.println("Fallo");
         }
-        if (metodo2()) {
+        if (conexionB()) {
             System.out.println("Listo");
         } else {
             System.out.println("Fallo");
         }
     }
 
-    public static boolean metodo1(String u) {
-        Auxiliar obx1 = new Auxiliar(u);
-        System.out.println("Conectando a " + obx1.h + ", con el usuario " + u);
-        return obx1.con();
+    public static boolean conexionA(String usuarioCorreo) {
+        Comparar enlace = new Comparar(usuarioCorreo);
+        System.out.println("Conectando a " + enlace.ip + ", con el usuario " + usuarioCorreo);
+        return enlace.validador();
     }
 
-    public static boolean metodo2() {
-        Auxiliar obx2 = new Auxiliar();
-        System.out.println("Conectando a " + obx2.h + ", con el usuario " + obx2.e);
-        return obx2.con();
+    public static boolean conexionB() {
+        Comparar enlace2 = new Comparar();
+        System.out.println("Conectando a " + enlace2.ip + ", con el usuario " + enlace2.gmail);
+        return enlace2.validador();
     }
 }
